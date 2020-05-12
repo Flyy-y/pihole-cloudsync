@@ -48,7 +48,7 @@ local_hosts='/etc/hosts'
 shared_hosts='sharedhosts.txt'
 ###########################################################################
 # SHOULDN'T NEED TO EDIT BELOW THIS LINE
-GIT_SSH_COMMAND='ssh -i /opt/pihole-conf/piholeconf_key'
+GIT_SSH_COMMAND='ssh -i /etc/pihole/piholeconf_key'
 
 # Force sudo if not running with root privileges
 SUDO=''
