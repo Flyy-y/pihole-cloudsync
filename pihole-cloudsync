@@ -30,8 +30,8 @@ update='April 2, 2020'
 # Project Home: https://github.com/stevejenkins/pihole-cloudsync
 ###########################################################################
 # CONSTANTS
-pihole_version=4
-personal_git_dir='/usr/local/bin/my-pihole-lists'
+pihole_version=5
+personal_git_dir='/opt/pihole-conf'
 pihole_dir='/etc/pihole'
 ad_list='adlists.list'
 black_list='black.list'
@@ -43,7 +43,7 @@ custom_list='custom.list'
 ###########################################################################
 # FOR SHARED HOSTS MODE ONLY
 # RE-INITIALIZE WITH --initpush OR --initpull AFTER ENABLING THIS MODE
-enable_hosts=off
+enable_hosts=true
 local_hosts='/etc/hosts'
 shared_hosts='sharedhosts.txt'
 ###########################################################################
