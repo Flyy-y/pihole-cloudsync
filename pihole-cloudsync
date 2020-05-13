@@ -80,7 +80,7 @@ push_initialize () {
 	fi
 
 	if [ "$shared_hosts_mode" ]; then
-		$SUDO ssh $phpipamserver generate-hosts > $shared_hosts
+		$SUDO ssh $phpipamserver generate-hosts > $personal_git_dir/$shared_hosts 2> /dev/null
 	fi
 	cd $personal_git_dir || exit
 	$SUDO git add .
@@ -120,7 +120,7 @@ push () {
 	fi
 
 	if [ "$shared_hosts_mode" ]; then
-		$SUDO ssh $phpipamserver generate-hosts > $shared_hosts
+		$SUDO ssh $phpipamserver generate-hosts > $personal_git_dir/$shared_hosts 2> /dev/null
 	fi
 	cd $personal_git_dir || exit
 	$SUDO git remote update > /dev/null
