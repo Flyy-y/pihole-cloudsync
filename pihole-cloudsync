@@ -46,7 +46,7 @@ custom_list='custom.list'
 enable_hosts=true
 local_hosts='/etc/hosts'
 shared_hosts='sharedhosts.txt'
-phpipamserver='PIPALX01.flyy'
+phpipamserver='172.16.0.25'
 ###########################################################################
 # SHOULDN'T NEED TO EDIT BELOW THIS LINE
 
