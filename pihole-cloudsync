@@ -166,6 +166,11 @@ pull () {
                 echo 'Done!';
                 exit 0
         else
+		$SUDO sed -e '/# SHARED HOSTS - START/,/# SHARED HOSTS - END/{/^# SHARED HOSTS/!d}' \
+		-e "/# SHARED HOSTS - START.*$/r $shared_hosts" \
+		--in-place=.bak /tmp/hosts
+		$SUDO mv /tmp/hosts $local_hosts
+		$SUDO pihole -g
                 echo 'Local Pi-hole lists match remote Git repo. No further action required.';
                 exit 0
         fi
